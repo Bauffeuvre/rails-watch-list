@@ -93,6 +93,7 @@ GEM
     nio4r (2.5.7)
     nokogiri (1.11.3-x86_64-linux)
       racc (~> 1.4)
+    open-uri (0.1.0)
     pg (1.2.3)
     puma (4.3.8)
       nio4r (~> 2.0)
@@ -209,6 +210,7 @@ DEPENDENCIES
   font-awesome-sass (~> 5.12.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  open-uri
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)

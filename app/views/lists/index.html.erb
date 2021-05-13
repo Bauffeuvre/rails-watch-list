@@ -1,0 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);">
+  <div class="container">
+    <h1>Save <strong>any</strong> kind of movies <strong></strong></h1>
+    <a class="btn btn-flat" href="/lists/new">Create a mew list</a>
+  </div>
+</div>
+
+<h2>Your lists :</h2>
+
+<div class="container" >
+  <div class="row">
+  <% @lists.each do |list| %>
+    <div class="col-4">
+      <a href="<%= list_path(list) %>"class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1616530940355-351fabd9524b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIwOTM3MTE5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600)">
+        <h2><%= list.name  %></h2>
+      </a>
+    </div>
+  <% end %>
+  </div>
+</div>
