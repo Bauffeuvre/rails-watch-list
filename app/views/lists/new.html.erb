@@ -1,4 +1,11 @@
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.submit 'Create List' %>
-<% end %>
+<div class="container my-3">
+  <div class="form-group">
+    <%= simple_form_for @list do |f| %>
+      <%= f.input :name, :label => "Name of the list" %>
+      <div class="form-buttons">
+        <%= f.submit 'Create List' %>
+    <% end %>
+      <%= link_to "Back", lists_path %>
+      </div>
+  </div>
+</div>
