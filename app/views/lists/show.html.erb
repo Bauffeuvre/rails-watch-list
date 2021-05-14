@@ -1,12 +1,17 @@
-<div class="list-title d-flex align-items-center m-3">
-<h1> <%= @list.name %></h1>
-<%= link_to "Add a new movie", new_list_bookmark_path(params[:id]),  class: "btn btn-flat" %>
-<%= link_to "Back to lists", lists_path, class:"btn btn-flat" %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>')">
+  <div class="list-title d-flex align-items-center m-3">
+    <h1> <%= @list.name %></h1>
+  </div>
+    <div>
+      <%= link_to "Add a new movie", new_list_bookmark_path(params[:id]),  class: "btn btn-flat" %>
+      <%= link_to "Back to lists", lists_path, class:"btn btn-flat" %>
+    </div>
 </div>
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-between">
   <% @list.bookmarks.each do |bookmark| %>
     <div class="card mb-3" style="max-width: 540px;">
+            <p class="card-rating"><%= bookmark.movie.rating %></p>
       <div class="row no-gutters">
         <div class="col-md-4">
           <img src="<%= bookmark.movie.poster_url %>" class="card-img" alt="<%=bookmark.movie.title%>">

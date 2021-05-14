@@ -33,7 +33,7 @@ class BookmarksController < ApplicationController
       flash[:error] = 'Something went wrong'
       redirect_to bookmark_path
     end
-  end
+  end  
   
   private
 

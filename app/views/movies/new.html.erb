@@ -1,0 +1,5 @@
+<%= simple_form_for @movie, html: { id: :newmovieform } do |f| %>
+  <%= f.input :title, html: { id: :inputmovie } %>
+  <%= f.submit 'Add movie to movies' %>
+<% end %>
+

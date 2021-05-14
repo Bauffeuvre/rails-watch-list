@@ -10,7 +10,7 @@ url = "http://tmdb.lewagon.com/movie/top_rated"
 user_serialized = URI.open(url).read
 movies_json = JSON.parse(user_serialized)
 
-puts movies = movies_json["results"][1..5]
+puts movies = movies_json["results"][1..20]
 
 puts "Creating movies..."
 movies.each do |movie|

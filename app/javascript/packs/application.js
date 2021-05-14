@@ -17,4 +17,5 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 
+import '../components/movie';
 import 'bootstrap';
