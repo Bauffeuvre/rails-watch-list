@@ -2,8 +2,9 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all
+    new
   end
-
+  
   def new
     @list = List.new
   end
